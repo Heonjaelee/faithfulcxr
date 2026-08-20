@@ -89,3 +89,9 @@ to 0.45.
 ## License
 
 MIT
+
+## Citation
+
+If you use this code or benchmark, please cite the archived release:
+
+DOI: 10.5281/zenodo.22035886
