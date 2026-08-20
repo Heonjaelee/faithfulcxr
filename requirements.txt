@@ -1,0 +1,24 @@
+# FaithfulCXR 의존성
+# 핵심(분석/파이프라인) — 항상 필요
+pyyaml>=6.0
+numpy>=1.24
+pillow>=10.0
+
+# 로컬 HF 4-bit 추론 (MedGemma / CheXagent) — hf_local 백엔드 쓸 때만
+# RTX 3050에서는 CUDA 빌드 torch 필요. 아래는 예시이며 실제로는
+# https://pytorch.org 에서 본인 CUDA 버전에 맞는 명령으로 설치하세요.
+torch>=2.2            # CUDA 빌드 권장 (pip install torch --index-url ...)
+transformers>=4.44
+accelerate>=0.30
+bitsandbytes>=0.43    # 4-bit 양자화 (리눅스/WSL 권장)
+sentencepiece>=0.2
+
+# API 백엔드 (GPT-4o) — api 백엔드 쓸 때만
+openai>=1.30
+
+# 데이터 처리
+pydicom>=2.4          # VinDr/MIMIC DICOM -> png 변환 시
+pandas>=2.0
+
+# (선택) 시각화
+matplotlib>=3.7
